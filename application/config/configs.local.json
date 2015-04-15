@@ -1,0 +1,33 @@
+{
+  "database": {
+      "default": {
+        "adapter": "PDO_MYSQL",
+        "params": {
+          "host": "localhost",
+          "username": "garuda_gos",
+          "password": "root",
+          "dbname": "garuda_gos",
+          "profiler": {
+            "enabled": false,
+            "class": "Gos_Db_Profiler_Log"
+          }
+        },
+        "isDefaultTableAdapter": true
+      },
+      "select": {
+        "adapter": "PDO_MYSQL",
+        "params": {
+          "host": "localhost",
+          "username": "garuda_gos",
+          "password": "root",
+          "dbname": "garuda_gos",
+          "profiler": {
+            "enabled": false,
+            "class": "Gos_Db_Profiler_Log"
+          }
+        },
+        "isDefaultTableAdapter": false
+      }
+
+
+}
