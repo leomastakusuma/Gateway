@@ -12,4 +12,8 @@ class Index extends Controller {
     public function index(){
             $this->title('Testing');
     }
+
+    public function getData(){
+           $this->title('Get Data');
+    }
    }
