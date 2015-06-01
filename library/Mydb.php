@@ -291,7 +291,7 @@ final class Mydb
     }
 
     /**
-     * model untuk memanggil Gos_Db_Users yang digunakan untuk memanage table Users
+     * model untuk memanggil Mydb_Db_User yang digunakan untuk memanage table Users
      * @return Mydb_Db_User
      */
     public static function getModelUser() {

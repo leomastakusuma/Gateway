@@ -18,7 +18,6 @@ class aritmatika extends Controller{
                       'pass'=>'test',
                       'level'=>'mbuh'
             );
-        Mydb::getModelUser()->test();
     }
                 
     
