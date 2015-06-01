@@ -1,0 +1,57 @@
+<br/>
+<title>Belajar Buat Skripsiku</title>
+<table border='1' cellpading='0' cellspacing='0' align="center" widht="50%">
+    <form action="<?php echo URL.'hitung/aritmatika/proses'?>" method="post" name="Form Aritmatika">
+        <caption> <?php echo !empty($alert) ? $alert : null?></caption>
+        <tr>
+            <td colspan="3" align="center">Matematika</td>
+        </tr>
+        <tr>
+            <td align="right">Metode</td>
+            <td>:</td>
+            <td>                   
+                <?php if(!empty($hasil)) :?>
+                    <input type="text" name="metode" value="<?php echo !empty($form['metode']) ? $form['metode'] : null;?>" readonly="" maxlength="10" size="25">
+                <?php else :?>
+                    <select name="metode" >
+                        <option value="Perkalian">Perkalian</option>
+                        <option value="Pembagian">Pembagian</option>
+                        <option value="Penjumlahan">Penjumlahan</option>
+                    </select>
+                <?php endif;?>
+            </td>
+        </tr>
+        <tr>
+            <td>Bilangan 1</td>
+            <td>:</td>
+            <td>
+                <input type="text" name="bilangan1" maxlength="10" size="25" placeholder="Input Bilangan 1" value="<?php echo !empty($form['bilangan1']) ? $form['bilangan1'] : null;?>">
+            </td>
+        </tr>
+        <tr>
+            <td>Bilangan 2 </td>
+            <td>:</td>
+            <td>
+                <input type="text" name="bilangan2" maxlength="10" size="25" placeholder="Input Bilangan 2" value="<?php echo !empty($form['bilangan2']) ? $form['bilangan2'] : null;?>">
+            </td>
+        </tr>
+        
+        <tr>
+            <td>Hasil</td>
+            <td>:</td>
+            <td>
+                <input type="text" name="hasil" maxlength="10" size="25" placeholder="Hasil.." value="<?php echo !empty($hasil) ? $hasil : null;?>">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="3"align="right">
+                <?php if(empty($hasil)):?>
+                    <input type="submit" name="submit" value="Hitung">
+                <?php else :?>
+                    <a href="<?php echo URL.'hitung'?>">Hitung Lagi !!</a>
+                <?php endif;?>
+            </td>
+        </tr>
+    </form>
+</table>
