@@ -19,6 +19,6 @@ class Mydb_Db_User extends Mydb_Db_Abstract {
     public function test(){
         $data = $this->select();
         $data->from($this->_name,array('*'));
-        echo $data;
+        return $this->getAdapterSelect()->fetchAll($data);
     }
 }

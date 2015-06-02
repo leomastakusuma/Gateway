@@ -32,14 +32,6 @@ define('DS',DIRECTORY_SEPARATOR );
 define ('PS',PATH_SEPARATOR);
 
 
-
-define('DB_TYPE', 'mysql');
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'db_reg1');
-define('DB_USER', 'root');
-define('DB_PASS', 'root');
-
-
 $includePath = array(
         get_include_path (),
         dirname(dirname(dirname(__FILE__))) . DS .'library',
