@@ -14,10 +14,7 @@ class aritmatika extends Controller{
     }
 
     public function index(){
-        $data = array('user'=>'testZend',
-                      'pass'=>'test',
-                      'level'=>'mbuh'
-            );
+        require_once UD.'index.html';
     }
                 
     
