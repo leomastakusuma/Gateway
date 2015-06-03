@@ -14,7 +14,9 @@ class aritmatika extends Controller{
     }
 
     public function index(){
-        require_once UD.'index.html';
+        require_once UD.'layout.phtml';
+
+        
     }
                 
     
