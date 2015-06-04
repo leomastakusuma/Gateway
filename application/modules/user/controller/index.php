@@ -7,11 +7,14 @@
  */
 
 class Index extends Controller{
-    public function index(){
-        echo 'user-index';
+    protected function form(){
+        include  APP_MODUL.'/user/view/index/index.html';
     }
-    
-    public function testing(){
-        echo 'user-testing';
+
+    public function index(){
+        require_once UD.'header.html';
+        $this->form();
+         require_once UD.'footer.html';
+        
     }
 }
