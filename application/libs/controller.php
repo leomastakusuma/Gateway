@@ -17,11 +17,7 @@ class Controller
 
     protected $view;
     
-    public function __construct() {
-        //establish the view object
-        $this->view = new View(get_class($this), $action);
-    }
-    
+
     public function redirect($value){
         header('Location: ' .URL.$value, true, 302);        
     }

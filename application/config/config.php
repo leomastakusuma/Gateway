@@ -18,9 +18,10 @@ ini_set("display_errors", 1);
  * Configuration for: Project URL
  * Put your URL here, for local development "127.0.0.1" or "localhost" (plus sub-folder) is fine
  */
-define('URL', 'http://localhost/gateway/');
+define('URL', 'http://localhost/mdpu/');
 define('view', 'application/views/');
-define('UD','application/templates/admin');
+define('UD','application/templates/');
+
 /**
  * Configuration for: Database
  * This is the place where you define your database credentials, database type etc.

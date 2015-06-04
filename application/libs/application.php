@@ -53,6 +53,8 @@ class Application {
 ////                  $controllers->index();
 //                }
             } else {
+                echo $modules;
+                echo $controllers;
                 echo 'Modules Files Tidak Ditemukan';
             }
 

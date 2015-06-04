@@ -14,12 +14,13 @@ class aritmatika extends Controller{
     }
 
     public function index(){
-        require_once UD.'layout.phtml';
-
+        require_once UD.'header.html';
+        $this->form();
+         require_once UD.'footer.html';
         
     }
                 
-    
+
     public function proses(){
        $form = $this->getPost();
        $metode = $form['metode'];
