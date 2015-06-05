@@ -16,8 +16,8 @@ class Controller
     protected $_request = null;
 
     protected $view;
-    
 
+    
     public function redirect($value){
         header('Location: ' .URL.$value, true, 302);        
     }
@@ -81,5 +81,5 @@ class Controller
             echo '<title>Framework V-01</title>';
         }
     }
-
+    
 }

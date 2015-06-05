@@ -301,4 +301,17 @@ final class Mydb
         }
         return self::registry($key);
     }
+    
+    
+    /**
+     * model untuk memanggil Mydb_Db_User yang digunakan untuk memanage table Users
+     * @return Mydb_Db_Cabang
+     */
+    public static function getModelCabang() {
+        $key = 'Mydb_Db_Cabang';
+        if (self::registry($key) === null) {
+            self::register($key, new Mydb_Db_Cabang());
+        }
+        return self::registry($key);
+    }
 }

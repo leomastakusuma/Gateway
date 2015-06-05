@@ -1,6 +1,6 @@
 <?php
 /**
- * Garuda Indonesia
+ * MDPU Finance
  * 
  * 
  * @category   Mydb

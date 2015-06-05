@@ -7,7 +7,7 @@
                    "host" : "localhost",
                    "username" : "root",
                    "password" : "root",
-                   "dbname" : "wisata",
+                   "dbname" : "mdpu_finance",
                    "profiler" : {
                        "enabled" : true,
                        "class" : "Mydb_Db_Profiler_Log"
@@ -21,7 +21,7 @@
                    "host" : "localhost",
                    "username" : "root",
                    "password" : "root",
-                   "dbname" : "wisata",
+                   "dbname" : "mdpu_finance",
                    "profiler" : {
                        "enabled" : true,
                        "class" : "Mydb_Db_Profiler_Log"
