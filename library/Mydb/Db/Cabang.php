@@ -18,7 +18,7 @@ class Mydb_Db_Cabang extends Mydb_Db_Abstract {
     public function getAllCabang(){
         $select = $this->select();
         $select->from($this->_name,array('*'));
-        $select->order('id_cabang');
+        $select->order('id_cabang desc');
         return $this->getAdapterSelect()->fetchAll($select);
                 
     }
