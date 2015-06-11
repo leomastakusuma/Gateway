@@ -25,37 +25,34 @@ class cabang extends Controller {
     public function edit($id) {
         if (!is_numeric($id)) {
             $this->redirect();
-        } 
+        }
         require_once UD . 'header.html';
-        $where = $this->getCabangModel()->getAdapter()->quoteInto('id_cabang', $id);
+        $where = $this->getCabangModel()->getAdapter()->quoteInto('id_cabang =?', $id);
         $dataCabang = $this->getCabangModel()->fetchRow($where)->toArray();
         include APP_MODUL . '/cabang/view/cabang/edit.phtml';
         require_once UD . 'footer.html';
-        
     }
 
-    public function update(){
+    public function update() {
         $data = $this->getPost();
-        if(!is_numeric($data['id_cabang'])){
-           $this->redirect();
+        if (!is_numeric($data['id_cabang'])) {
+            $this->redirect();
         }
-        
-        try{
-           $where = $this->getCabangModel()->getAdapter()->quoteInto('id_cabang = ?', $data['id_cabang']);
-           unset($data['id_cabang']);
-           $this->getCabangModel()->update($data, $where); 
-           $this->redirect('cabang');
+
+        try {
+            $where = $this->getCabangModel()->getAdapter()->quoteInto('id_cabang = ?', $data['id_cabang']);
+            unset($data['id_cabang']);
+            $this->getCabangModel()->update($data, $where);
+            $this->redirect('cabang');
         } catch (Exception $ex) {
-           echo $ex->getMessage();
+            echo $ex->getMessage();
         }
-        
-       
     }
 
     public function delete($id) {
         if (!is_numeric($id)) {
             $this->redirect();
-        } 
+        }
         $where = $this->getCabangModel()->getAdapter()->quoteInto('id_cabang =?', $id);
         $this->getCabangModel()->delete($where);
         $this->redirect('cabang');

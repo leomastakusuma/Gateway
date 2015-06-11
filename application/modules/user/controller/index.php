@@ -1,20 +1,23 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * MDPU Finance
+ * @category   Modules
+ * @package    User
+ * @subpackage Controller
+ * @filesource Index.php
  */
+class Index extends Controller {
 
-class Index extends Controller{
-    protected function form(){
-        include  APP_MODUL.'/user/view/index/index.html';
+    public function index() {
+        require_once UD . 'headerDataTables.phtml';
+        $data = $this->getModelUser()->getAllUser();
+        include APP_MODUL . '/user/view/index/dataUser.phtml';
+        require_once UD . 'footerDataTables.phtml';       
     }
 
-    public function index(){
-        require_once UD.'header.html';
-        $this->form();
-         require_once UD.'footer.html';
-        
+    public function getModelUser() {
+        return new Mydb_Db_User();
     }
+
 }

@@ -5,7 +5,7 @@
         <div class="col-lg-12">
             <ol class="breadcrumb">
                 <li class="active">
-                    <i class="fa fa-dashboard"></i> <a href="<?php echo URL?>">Dashboard</a>
+                    <i class="fa fa-dashboard"></i> <a href="<?php echo URL?>">Home</a>
                 </li>
                 <li>
                     <i class="fa fa-table active"></i> <a href="<?php echo URL?>cabang/cabang">Input Cabang</a>
@@ -27,10 +27,10 @@
            <tr>
                
              <th class="col-sm-1">No</th>
-             <th class="col-sm-2">ID Cabang</th>
+             <!--<th class="col-sm-2">ID Cabang</th>-->
              <th class="col-lg-3">Provinsi</th>
              <th class="col-lg-3">Kota</th>
-             <th class="col-lg-1">KodePost</th>
+             <th class="col-lg-1">Kode Post</th>
              <th class="col-sm-2" >Action</th>
            </tr>
          </thead>
@@ -40,7 +40,7 @@
            <?php foreach ($data as $val):$i++;?>
              <tr>
                  <td><?php echo $i;?></td>
-                 <td><?php echo $val['id_cabang']?></td>
+                 <!--<td><?php // echo $val['id_cabang']?></td>-->
                  <td><?php echo $val['provinsi']?></td>
                  <td><?php echo $val['kota']?></td>
                  <td><?php echo $val['kode_pos']?></td>
@@ -56,7 +56,7 @@
          <tfoot>
            <tr>
              <th>ID</th>
-             <th>ID Cabang</th>
+             <!--<th>ID Cabang</th>-->
              <th>Provinsi</th>
              <th>Kota</th>
              <th>KodePost</th>
